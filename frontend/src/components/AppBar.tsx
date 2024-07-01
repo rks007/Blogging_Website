@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom"
-import { Avatar } from "./BlogCard"
 
 export const AppBar = () => {
     const navigate = useNavigate();
