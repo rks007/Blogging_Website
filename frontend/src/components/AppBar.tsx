@@ -9,7 +9,7 @@ export const AppBar = () => {
     }
     return <div className=" border-b flex justify-between px-10 py-4">
         <div className=" flex justify-center items-center font-bold shadow-md p-1 w-28">
-            <Link to={"/blogs"}>Medium</Link>
+            <Link to={"/blogs"}>EchoBlog</Link>
         </div>
         <div className="flex">
             <button className="mr-10 ml-10 bg-green-500 rounded-lg p-1 hover:bg-green-600"><Link to={'/publish'}>+Blog</Link></button>

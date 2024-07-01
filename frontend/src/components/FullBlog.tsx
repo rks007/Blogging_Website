@@ -23,7 +23,7 @@ export const FullBlog = ({blog}: {blog: Blog}) => {
                 {blog.author.name}
               </div>  
               <div className="ml-3 text-slate-500">
-                The medium is powered with great tech and have great capabilities to handle load
+                The EchoBlog is powered with great tech and have great capabilities to handle load
               </div>
             </div>
   
