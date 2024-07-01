@@ -17,7 +17,7 @@ export const FullBlog = ({blog}: {blog: Blog}) => {
                   {blog.content}
               </div>
             </div>
-            <div className="col-span-4">
+            <div className=" col-span-4 hidden sm:block">
                 Author
               <div className="text-xl font-bold mb-1 ml-3 pt-2">
                 {blog.author.name}

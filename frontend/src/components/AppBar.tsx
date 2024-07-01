@@ -11,8 +11,8 @@ export const AppBar = () => {
         <div className=" flex justify-center items-center font-bold shadow-md p-1 w-28">
             <Link to={"/blogs"}>Medium</Link>
         </div>
-        <div>
-            <button className="mr-10 bg-green-500 rounded-lg p-1 hover:bg-green-600"><Link to={'/publish'}>+Blog</Link></button>
+        <div className="flex">
+            <button className="mr-10 ml-10 bg-green-500 rounded-lg p-1 hover:bg-green-600"><Link to={'/publish'}>+Blog</Link></button>
             <button onClick={logoutuser} className="ml-10 bg-gray-300 rounded-lg p-1 hover:bg-gray-400">Logout</button>
         </div>
         
