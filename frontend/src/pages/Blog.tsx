@@ -5,6 +5,7 @@ import { useBlog } from "../hooks"
 import { useParams } from 'react-router-dom'
 
 export const Blog = () => {
+    //getting param from the inbuild funtion on react router dom
     const { id } = useParams();
 
     const {loading, blog} = useBlog({
