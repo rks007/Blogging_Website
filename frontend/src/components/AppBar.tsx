@@ -13,7 +13,7 @@ export const AppBar = () => {
         </div>
         <div className="flex">
             <button className="mr-10 ml-10 bg-green-500 rounded-lg p-1 hover:bg-green-600 active:bg-green-400 w-20"><Link to={'/publish'}>+Blog</Link></button>
-            <button onClick={logoutuser} className="ml-10 w-20 bg-gray-300 rounded-lg p-1 hover:bg-gray-400 active:bg-gray-200">Logout</button>
+            <button onClick={logoutuser} className="ml-10 w-20 mr-5 bg-gray-300 rounded-lg p-1 hover:bg-gray-400 active:bg-gray-200">Logout</button>
         </div>
         
 
