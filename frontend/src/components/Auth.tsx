@@ -18,6 +18,7 @@ export const Auth = ({type}: {type: "signup" | "signin"}) => {
             const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`, postInputs);
             const jwt = response.data.jwt;
             localStorage.setItem("token", jwt);
+            localStorage.setItem("name", postInputs.name || "")
             navigate('/blogs')
         } catch (error) {
             alert(`Error while ${type === "signup" ? "Sign Up" : "Sign In"}`)
@@ -44,12 +45,12 @@ export const Auth = ({type}: {type: "signup" | "signin"}) => {
               </div>
             </div>
           <div className='pt-5'>
-            {type ==="signin" ? "" : <LabelledInput label='Name' type='text' placeholder='john' onChange={(e) => {
+            <LabelledInput label='Name' type='text' placeholder='john' onChange={(e) => {
                 setPostInputs({
                     ...postInputs,
                     name: e.target.value
                 })
-            }}/>}
+            }}/>
             <LabelledInput label='username' type={"text"} placeholder='john@gmail.com' onChange={(e) => {
                 setPostInputs({
                     ...postInputs,

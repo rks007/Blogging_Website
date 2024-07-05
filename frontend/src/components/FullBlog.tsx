@@ -3,8 +3,17 @@ import { AppBar } from "./AppBar"
 import {useNavigate, useParams} from 'react-router-dom'
 
 export const FullBlog = ({blog}: {blog: Blog}) => {
+  const loggerName = localStorage.getItem("name");
   const navigate = useNavigate();
   const { id } = useParams();
+
+  const handleEditClick = () => {
+    if (loggerName == blog.author.name) {
+      navigate(`/edit/${id}/${blog.title}/${blog.content}`);
+    } else {
+      alert("You can only edit your own blog post");
+    }
+  };
     return <div>
         <AppBar/>
         <div className=" flex justify-center">
@@ -20,7 +29,7 @@ export const FullBlog = ({blog}: {blog: Blog}) => {
                   {blog.content}
               </div>
               <button 
-              onClick={() => navigate(`/edit/${id}/${blog.title}/${blog.content}`) }
+              onClick={handleEditClick}
               className=" bg-yellow-300 p-2 w-20 mt-5 rounded-lg hover:bg-yellow-400 active:bg-yellow-500">Edit</button>
             </div>
             <div className=" col-span-4 hidden sm:block">
