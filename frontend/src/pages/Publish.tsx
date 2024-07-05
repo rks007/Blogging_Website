@@ -30,7 +30,7 @@ export const Publish = () => {
             <input onChange={(e) => setTitle(e.target.value)} type="text"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Title" />
           </div>
       </div>
-      <TextEditor value="" onChange = {(e) => setContent(e.target.value)}/>
+      <TextEditor value={content} onChange = {(e) => setContent(e.target.value)}/>
       <div className="flex justify-center">
         <div className="max-w-screen-lg w-full mx-20">
           <button onClick={publishPost} type="button" className="py-2.5 px-5 me-2 mt-5  text-sm font-medium text-gray-900 focus:outline-none bg-blue-300 rounded-full border border-gray-200 hover:bg-blue-400 focus:z-10 focus:ring-4 focus:ring-gray-100" aria-required>Publish</button>
