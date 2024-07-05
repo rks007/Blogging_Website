@@ -1,7 +1,10 @@
 import { Blog } from "../hooks"
 import { AppBar } from "./AppBar"
+import {useNavigate, useParams} from 'react-router-dom'
 
 export const FullBlog = ({blog}: {blog: Blog}) => {
+  const navigate = useNavigate();
+  const { id } = useParams();
     return <div>
         <AppBar/>
         <div className=" flex justify-center">
@@ -16,6 +19,9 @@ export const FullBlog = ({blog}: {blog: Blog}) => {
               <div className="mt-2">
                   {blog.content}
               </div>
+              <button 
+              onClick={() => navigate(`/edit/${id}/${blog.title}/${blog.content}`) }
+              className=" bg-yellow-300 p-2 w-20 mt-5 rounded-lg hover:bg-yellow-400 active:bg-yellow-500">Edit</button>
             </div>
             <div className=" col-span-4 hidden sm:block">
                 Author

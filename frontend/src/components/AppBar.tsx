@@ -12,8 +12,8 @@ export const AppBar = () => {
             <Link to={"/blogs"}>EchoBlog</Link>
         </div>
         <div className="flex">
-            <button className="mr-10 ml-10 bg-green-500 rounded-lg p-1 hover:bg-green-600"><Link to={'/publish'}>+Blog</Link></button>
-            <button onClick={logoutuser} className="ml-10 bg-gray-300 rounded-lg p-1 hover:bg-gray-400">Logout</button>
+            <button className="mr-10 ml-10 bg-green-500 rounded-lg p-1 hover:bg-green-600 active:bg-green-400"><Link to={'/publish'}>+Blog</Link></button>
+            <button onClick={logoutuser} className="ml-10 bg-gray-300 rounded-lg p-1 hover:bg-gray-400 active:bg-gray-200">Logout</button>
         </div>
         
 
